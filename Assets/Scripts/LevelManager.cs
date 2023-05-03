@@ -6,6 +6,8 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
 
+    public int gemsCollected;
+
     private void Awake() { 
         instance = this; 
     }
