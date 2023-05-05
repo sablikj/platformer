@@ -38,54 +38,57 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (knockBackCounter <= 0)
+        if (!PauseMenu.instance.isPaused)
         {
-            RB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), RB.velocity.y);
-
-            isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
-
-            if (isGrounded)
+            if (knockBackCounter <= 0)
             {
-                canDoubleJump = true;
-            }
+                RB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), RB.velocity.y);
 
-            if (Input.GetButtonDown("Jump"))
-            {
+                isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
+
                 if (isGrounded)
                 {
-                    RB.velocity = new Vector2(RB.velocity.x, jumpForce);
-                    AudioManager.instance.PlaySFX(10);
+                    canDoubleJump = true;
                 }
-                else
+
+                if (Input.GetButtonDown("Jump"))
                 {
-                    if (canDoubleJump)
+                    if (isGrounded)
                     {
                         RB.velocity = new Vector2(RB.velocity.x, jumpForce);
-                        canDoubleJump = false;
                         AudioManager.instance.PlaySFX(10);
                     }
+                    else
+                    {
+                        if (canDoubleJump)
+                        {
+                            RB.velocity = new Vector2(RB.velocity.x, jumpForce);
+                            canDoubleJump = false;
+                            AudioManager.instance.PlaySFX(10);
+                        }
+                    }
                 }
-            }
 
-            if (RB.velocity.x < 0)
-            {
-                SR.flipX = true;
-            }
-            else if (RB.velocity.x > 0)
-            {
-                SR.flipX = false;
-            }
-        }
-        else
-        {
-            knockBackCounter -= Time.deltaTime;
-            if(!SR.flipX) 
-            {
-                RB.velocity = new Vector2(-knockBackForce, RB.velocity.y);
+                if (RB.velocity.x < 0)
+                {
+                    SR.flipX = true;
+                }
+                else if (RB.velocity.x > 0)
+                {
+                    SR.flipX = false;
+                }
             }
             else
             {
-                RB.velocity = new Vector2(knockBackForce, RB.velocity.y);
+                knockBackCounter -= Time.deltaTime;
+                if (!SR.flipX)
+                {
+                    RB.velocity = new Vector2(-knockBackForce, RB.velocity.y);
+                }
+                else
+                {
+                    RB.velocity = new Vector2(knockBackForce, RB.velocity.y);
+                }
             }
         }
         anim.SetFloat("moveSpeed", Mathf.Abs(RB.velocity.x));
