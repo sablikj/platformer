@@ -48,10 +48,7 @@ public class PlayerHealthController : MonoBehaviour
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
-                //gameObject.SetActive(false);
-
                 Instantiate(deathEffect, transform.position, transform.rotation);
-
                 LevelManager.instance.RespawnPlayer();
             }
             else
@@ -60,6 +57,7 @@ public class PlayerHealthController : MonoBehaviour
                 SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, .5f);
 
                 PlayerController.instance.KnockBack();
+                AudioManager.instance.PlaySFX(9);
             }
 
             UIController.instance.UpdateHealthDisplay();
