@@ -422,7 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1024,7 +1024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gemsCollected: 0
-  levelToLoad: Main_Menu
+  levelToLoad: LevelSelect
+  timeInLevel: 0
   waitToRespawn: 1
 --- !u!1 &8065808786472992379
 GameObject:
@@ -1325,7 +1326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25ea3d39303fab4db7ff1a0ad622247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSelect: 
+  levelSelect: LevelSelect
   mainMenu: Main_Menu
   pauseScreen: {fileID: 8065808785673746811}
   isPaused: 0
@@ -1555,8 +1556,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8238250339556804699, guid: cd2ea038188214a47977aa19fe3ebfea, type: 3}
+      propertyPath: levelEndMusic
+      value: 
+      objectReference: {fileID: 8065808785017107666}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd2ea038188214a47977aa19fe3ebfea, type: 3}
+--- !u!82 &8065808785017107666 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8238250339525513752, guid: cd2ea038188214a47977aa19fe3ebfea, type: 3}
+  m_PrefabInstance: {fileID: 2142490018961401546}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8065808785115311760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8238250339556804698, guid: cd2ea038188214a47977aa19fe3ebfea, type: 3}

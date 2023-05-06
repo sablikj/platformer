@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     public AudioSource[] soundEffects;
-    public AudioSource bgmusic, endMusic;
+    public AudioSource bgmusic, levelEndMusic;
 
     private void Awake()
     {
@@ -33,5 +33,11 @@ public class AudioManager : MonoBehaviour
         // Adding variation to the sound
         soundEffects[sound].pitch = Random.Range(.9f, 1.1f);
         soundEffects[sound].Play();
+    }
+
+    public void PlayLevelVictory()
+    {
+        bgmusic.Stop();
+        levelEndMusic.Play();
     }
 }
