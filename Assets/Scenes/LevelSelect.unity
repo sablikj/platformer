@@ -1999,11 +1999,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
       propertyPath: levelName
-      value: '5: Rocky Mountains'
+      value: '5:  Hill Climb'
+      objectReference: {fileID: 0}
+    - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
+      propertyPath: totalGems
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
       propertyPath: targetTime
-      value: 50
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
       propertyPath: levelToLoad
@@ -2012,6 +2016,10 @@ PrefabInstance:
     - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
       propertyPath: levelToCheck
       value: Level1-4
+      objectReference: {fileID: 0}
+    - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
+      propertyPath: gemsCollected
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5264401544639077037, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
       propertyPath: m_Name
@@ -2145,7 +2153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
       propertyPath: totalGems
-      value: 11
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
       propertyPath: targetTime
@@ -3559,7 +3567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
       propertyPath: totalGems
-      value: 27
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
       propertyPath: targetTime
