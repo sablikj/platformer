@@ -43,7 +43,6 @@ public class LSManager : MonoBehaviour
         AudioManager.instance.PlaySFX(4);
         LSUIController.instance.FadeToBlack();
         yield return new WaitForSeconds((1f / LSUIController.instance.fadeSpeed) + .25f);
-
         SceneManager.LoadScene(player.currentPoint.levelToLoad);
     }
 }

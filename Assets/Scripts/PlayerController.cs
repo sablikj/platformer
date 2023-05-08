@@ -44,9 +44,7 @@ public class PlayerController : MonoBehaviour
             if (knockBackCounter <= 0)
             {
                 RB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), RB.velocity.y);
-
                 isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
-
                 if (isGrounded)
                 {
                     canDoubleJump = true;
@@ -100,7 +98,6 @@ public class PlayerController : MonoBehaviour
     {
         knockBackCounter = knockBackLength;
         RB.velocity = new Vector2(0f, knockBackForce);
-
         anim.SetTrigger("hurt");
     }
 

@@ -5,8 +5,8 @@ using UnityEngine;
 public class BouncePad : MonoBehaviour
 {
     private Animator anim;
-
     public float bounceForce = 20f;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -10,7 +10,6 @@ public class PlayerHealthController : MonoBehaviour
     private float invincibleCounter;
 
     private SpriteRenderer SR;
-
     public GameObject deathEffect;
 
     private void Awake()
@@ -31,7 +30,6 @@ public class PlayerHealthController : MonoBehaviour
         if(invincibleCounter > 0)
         {
             invincibleCounter-= Time.deltaTime; // 1/fps sec
-
             if(invincibleCounter <= 0)
             {
                 SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, 1f);
@@ -44,7 +42,6 @@ public class PlayerHealthController : MonoBehaviour
         if(invincibleCounter <= 0)
         {
             currentHealth--;
-
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
@@ -55,11 +52,9 @@ public class PlayerHealthController : MonoBehaviour
             {
                 invincibleCounter = invincibleLength;
                 SR.color = new Color(SR.color.r, SR.color.g, SR.color.b, .5f);
-
                 PlayerController.instance.KnockBack();
                 AudioManager.instance.PlaySFX(9);
             }
-
             UIController.instance.UpdateHealthDisplay();
         }        
     }
@@ -72,7 +67,6 @@ public class PlayerHealthController : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-
         UIController.instance.UpdateHealthDisplay();
     }
 

@@ -32,7 +32,6 @@ public class Slammer : MonoBehaviour
         if (slamming)
         {
             theSlammer.position = Vector3.MoveTowards(theSlammer.position, slammerTarget.position, slamSpeed * Time.deltaTime);
-
             if (theSlammer.position == slammerTarget.position)
             {
                 waitCounter -= Time.deltaTime;
@@ -48,7 +47,6 @@ public class Slammer : MonoBehaviour
         if (resetting)
         {
             theSlammer.position = Vector3.MoveTowards(theSlammer.position, startPoint, resetSpeed * Time.deltaTime);
-
             if (theSlammer.position == startPoint)
             {
                 resetting = false;
@@ -66,7 +64,6 @@ public class Slammer : MonoBehaviour
                 waitCounter = waitAfterSlam;
 
                 theSlammer.position = Vector3.MoveTowards(theSlammer.position, slammerTarget.position, slamSpeed * Time.deltaTime);
-
                 if (theSlammer.position == slammerTarget.position)
                 {
                     waitCounter -= Time.deltaTime;

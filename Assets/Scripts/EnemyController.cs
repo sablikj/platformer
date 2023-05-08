@@ -24,9 +24,7 @@ public class EnemyController : MonoBehaviour
         // Points no longer children of enemy - not changing
         leftPoint.parent = null;
         rightPoint.parent = null;
-
         movingRight= true;
-
         moveCount = moveTime;
     }
 
@@ -36,7 +34,6 @@ public class EnemyController : MonoBehaviour
         if (moveCount > 0)
         {
             moveCount -= Time.deltaTime;
-
             if (movingRight)
             {
                 RB.velocity = new Vector2(moveSpeed, RB.velocity.y);
@@ -69,7 +66,6 @@ public class EnemyController : MonoBehaviour
         {
             waitCount -= Time.deltaTime;
             RB.velocity = new Vector2(0f, RB.velocity.y);
-
             if(waitCount <= 0)
             {
                 moveCount = Random.Range(moveTime * .75f, waitTime * 1.25f); ;

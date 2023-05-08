@@ -69,7 +69,6 @@ public class LSPlayer : MonoBehaviour
     {
         currentPoint = nextPoint;
         LSUIController.instance.HideInfo();
-
         AudioManager.instance.PlaySFX(5);
     }
 }

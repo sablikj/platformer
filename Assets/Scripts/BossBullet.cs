@@ -25,7 +25,6 @@ public class BossBullet : MonoBehaviour
             PlayerHealthController.instance.DealDamage();
         }
         AudioManager.instance.PlaySFX(1);
-
         Destroy(gameObject);
     }
 }

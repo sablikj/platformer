@@ -41,9 +41,7 @@ public class LevelManager : MonoBehaviour
 
         yield return new WaitForSeconds((1f / UIController.instance.fadeSpeed) + .2f);
 
-        UIController.instance.FadeFromBlack();
-       
-
+        UIController.instance.FadeFromBlack();     
         PlayerController.instance.gameObject.SetActive(true);
         PlayerController.instance.transform.position = CheckpointController.instance.spawnPoint;
         PlayerHealthController.instance.currentHealth = PlayerHealthController.instance.maxHealth;
@@ -58,17 +56,14 @@ public class LevelManager : MonoBehaviour
     public IEnumerator EndLevelCo()
     {
         AudioManager.instance.PlayLevelVictory();
-
         PlayerController.instance.stopInput = true;
         CameraController.instance.stopFollow = true;
-
         UIController.instance.levelCompleteText.SetActive(true);
 
         yield return new WaitForSeconds(1.5f);
         UIController.instance.FadeToBlack();
 
         yield return new WaitForSeconds((1f / UIController.instance.fadeSpeed) + 3f);
-
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
         PlayerPrefs.SetString("CurrentLevel", SceneManager.GetActiveScene().name);
 
@@ -95,9 +90,7 @@ public class LevelManager : MonoBehaviour
         else
         {
             PlayerPrefs.SetFloat(SceneManager.GetActiveScene().name + "_time", timeInLevel);
-        }
-        
-
+        }       
         SceneManager.LoadScene(levelToLoad);
     }
 }

@@ -72,7 +72,6 @@ public class LSUIController : MonoBehaviour
         {
             bestTime.text = "BEST: " + levelInfo.bestTime.ToString("F2") + "s"; // F2 - float with 2 decimal places
         }
-
         levelInfoPanel.SetActive(true);
     }
 

@@ -23,11 +23,10 @@ public class Checkpoint : MonoBehaviour
         {
             CheckpointController.instance.DeactivateCheckpoints();
             SR.sprite = cpOn;
-
             CheckpointController.instance.SetSpawnPoint(transform.position);
         }
-
     }
+
     public void ResetCheckpoint()
     {
         SR.sprite = cpOff;

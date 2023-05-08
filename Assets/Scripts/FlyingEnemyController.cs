@@ -7,7 +7,6 @@ public class FlyingEnemyController : MonoBehaviour
     public Transform[] points;
     public float moveSpeed;
     private int currentPoint;
-
     public SpriteRenderer SR;
 
     public float distanceToAttackPlayer, chaseSpeed;
@@ -38,7 +37,6 @@ public class FlyingEnemyController : MonoBehaviour
             {
                 attackTarget = Vector3.zero;
                 transform.position = Vector3.MoveTowards(transform.position, points[currentPoint].position, moveSpeed * Time.deltaTime);
-
                 if (Vector3.Distance(transform.position, points[currentPoint].position) < .05f)
                 {
                     currentPoint++;

@@ -5,9 +5,7 @@ using UnityEngine;
 public class CheckpointController : MonoBehaviour
 {
     public static CheckpointController instance;
-
     private Checkpoint[] checkpoints;
-
     public Vector3 spawnPoint;
 
     private void Awake()
@@ -18,7 +16,6 @@ public class CheckpointController : MonoBehaviour
     void Start()
     {
         checkpoints = FindObjectsOfType<Checkpoint>();
-
         spawnPoint = PlayerController.instance.transform.position;
     }
 
