@@ -148,6 +148,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
+      propertyPath: levelName
+      value: '3: Forgotten Caverns'
+      objectReference: {fileID: 0}
+    - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
+      propertyPath: totalGems
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
+      propertyPath: targetTime
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 845046459040217714, guid: 954b51e6871d78540b7f7608a1892e1c, type: 3}
       propertyPath: levelToLoad
       value: Level1-3
       objectReference: {fileID: 0}
