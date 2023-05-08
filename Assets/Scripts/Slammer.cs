@@ -22,7 +22,7 @@ public class Slammer : MonoBehaviour
     {
         if (!slamming && !resetting)
         {
-            if (Vector3.Distance(slammerTarget.position, PlayerController.instance.transform.position) < 2f)
+            if (Vector3.Distance(slammerTarget.position, PlayerController.instance.transform.position) < 10f)
             {
                 slamming = true;
                 waitCounter = waitAfterSlam;
@@ -32,8 +32,6 @@ public class Slammer : MonoBehaviour
         if (slamming)
         {
             theSlammer.position = Vector3.MoveTowards(theSlammer.position, slammerTarget.position, slamSpeed * Time.deltaTime);
-
-
 
             if (theSlammer.position == slammerTarget.position)
             {
@@ -54,6 +52,31 @@ public class Slammer : MonoBehaviour
             if (theSlammer.position == startPoint)
             {
                 resetting = false;
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player")
+        {
+            if (!slamming && !resetting)
+            {
+                slamming = true;
+                waitCounter = waitAfterSlam;
+
+                theSlammer.position = Vector3.MoveTowards(theSlammer.position, slammerTarget.position, slamSpeed * Time.deltaTime);
+
+                if (theSlammer.position == slammerTarget.position)
+                {
+                    waitCounter -= Time.deltaTime;
+                    if (waitCounter <= 0)
+                    {
+                        slamming = false;
+                        resetting = true;
+                    }
+
+                }
             }
         }
     }
