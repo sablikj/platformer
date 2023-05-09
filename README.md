@@ -1,5 +1,5 @@
 # Platformer
-A 2D  retro-style platformer game created in Unity engine. This game was created as a funal project for the AP8PO course.
+A 2D  retro-style platformer game created in Unity engine. This game was created as a final project for the AP8PO course.
 
 ## Features
 * 7 levels
@@ -10,6 +10,10 @@ A 2D  retro-style platformer game created in Unity engine. This game was created
 * Level selector
 * Collectible items
 * Level statistics
+
+## [Documentation](https://dbilnica.github.io/platformer_doc/)
+* All used scripts have documentation available including how-to-use guide
+* Documentation created using [MkDocs](https://www.mkdocs.org/)
 
 ## Authors
 * [Jan Sáblík](https://github.com/sablikj)
