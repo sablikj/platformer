@@ -11,7 +11,7 @@ A 2D  retro-style platformer game created in Unity engine. This game was created
 * Collectible items
 * Level statistics
 
-## [Documentation](https://dbilnica.github.io/platformer_doc/)
+## [Documentation](https://platformer-doc.vercel.app/)
 * All used scripts have documentation available including how-to-use guide
 * Documentation created using [MkDocs](https://www.mkdocs.org/)
 
