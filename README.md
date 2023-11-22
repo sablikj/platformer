@@ -3,7 +3,7 @@ A 2D  retro-style platformer game created in Unity engine. This game was created
 
 ## Features
 * 7 levels
-* 3 types of enemies
+* 4 types of enemies
 * Level mechanics like moving platforms, jump pads or smasher
 * Game progress saving
 * Pause menu
